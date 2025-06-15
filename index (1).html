@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Көрімдік - Қолдау көрсету</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="gradient-orb orb-4"></div>
+        <div class="gradient-orb orb-5"></div>
+    </div>
+    
+    <!-- Floating Particles -->
+    <div class="particles-container" id="particles"></div>
+    
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Header Section -->
+        <header class="hero-section">
+            <div class="profile-container">
+                <div class="profile-card glass-effect" id="profileCard">
+                    <div class="profile-placeholder" id="profilePlaceholder">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <p class="upload-text">Фото жүктеу күтілуде</p>
+                    </div>
+                    <div class="profile-image" id="profileImage" style="display: none;">
+                        <img id="userPhoto" src="" alt="Пайдаланушы фотосы">
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="title-section">
+                <h1 class="main-title">
+                    <span class="title-icon">✨</span>
+                    <span class="title-text">Көрімдік</span>
+                    <span class="title-icon">✨</span>
+                </h1>
+                <p class="subtitle">Сіздің қолдауыңыз маған өте маңызды</p>
+                <div class="title-decoration"></div>
+            </div>
+            
+            <div class="certificate-container">
+                <div class="certificate-card glass-effect" id="certificateCard">
+                    <div class="certificate-placeholder" id="certificatePlaceholder">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <p class="upload-text">Аттестат фотосы жүктеу күтілуде</p>
+                    </div>
+                    <div class="certificate-image" id="certificateImage" style="display: none;">
+                        <img id="certificatePhoto" src="" alt="Аттестат">
+                        <div class="certificate-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="content-section">
+            <div class="donation-card glass-effect">
+                <div class="card-header">
+                    <div class="header-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h2 class="card-title">Көрімдік жіберу</h2>
+                    <p class="card-subtitle">Егер сіз менің жұмысымды бағалайтын болсаңыз, көрімдік жібере аласыз</p>
+                </div>
+
+                <!-- Kaspi Section -->
+                <div class="kaspi-section">
+                    <div class="kaspi-header">
+                        <div class="kaspi-logo">
+                            <div class="kaspi-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <span class="kaspi-text">Kaspi</span>
+                        </div>
+                        <div class="kaspi-badge">
+                            <span>Қауіпсіз</span>
+                        </div>
+                    </div>
+                    
+                    <div class="phone-section">
+                        <label class="phone-label">
+                            <i class="fas fa-phone"></i>
+                            Телефон нөмірі
+                        </label>
+                        <div class="phone-display" id="phoneNumber">
+                            <span class="phone-text">+7 (702) 907-36-92</span>
+                            <button class="copy-button" onclick="copyNumber()">
+                                <i class="fas fa-copy"></i>
+                                <span>Көшіру</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="instructions-section">
+                        <h3 class="instructions-title">
+                            <i class="fas fa-info-circle"></i>
+                            Қалай жіберу керек:
+                        </h3>
+                        <div class="steps-container">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Kaspi қосымшасын ашыңыз</span>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <i class="fas fa-exchange-alt"></i>
+                                    <span>"Аударым" бөлімін таңдаңыз</span>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <i class="fas fa-keyboard"></i>
+                                    <span>Телефон нөмірін енгізіңіз</span>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span>Сомасын енгізіп жіберіңіз</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gratitude Section -->
+                <div class="gratitude-section">
+                    <div class="gratitude-content">
+                        <div class="gratitude-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="gratitude-title">Алғыс айту</h3>
+                        <p class="gratitude-text">Сіздің әрбір көрімдігіңіз маған үлкен қолдау болып табылады. Рақмет сізге!</p>
+                    </div>
+                    <div class="floating-hearts" id="floatingHearts"></div>
+                </div>
+
+                <!-- Amount Suggestions -->
+                <div class="amounts-section">
+                    <h3 class="amounts-title">
+                        <i class="fas fa-coins"></i>
+                        Ұсынылатын сомалар
+                    </h3>
+                    <div class="amounts-grid">
+                        <button class="amount-btn" onclick="showAmount(500)" data-amount="500">
+                            <div class="amount-content">
+                                <i class="fas fa-tenge-sign"></i>
+                                <span class="amount-value">500</span>
+                                <span class="amount-currency">₸</span>
+                            </div>
+                            <div class="amount-glow"></div>
+                        </button>
+                        <button class="amount-btn" onclick="showAmount(1000)" data-amount="1000">
+                            <div class="amount-content">
+                                <i class="fas fa-tenge-sign"></i>
+                                <span class="amount-value">1000</span>
+                                <span class="amount-currency">₸</span>
+                            </div>
+                            <div class="amount-glow"></div>
+                        </button>
+                        <button class="amount-btn" onclick="showAmount(2000)" data-amount="2000">
+                            <div class="amount-content">
+                                <i class="fas fa-tenge-sign"></i>
+                                <span class="amount-value">2000</span>
+                                <span class="amount-currency">₸</span>
+                            </div>
+                            <div class="amount-glow"></div>
+                        </button>
+                        <button class="amount-btn" onclick="showAmount(5000)" data-amount="5000">
+                            <div class="amount-content">
+                                <i class="fas fa-tenge-sign"></i>
+                                <span class="amount-value">5000</span>
+                                <span class="amount-currency">₸</span>
+                            </div>
+                            <div class="amount-glow"></div>
+                        </button>
+                        <button class="amount-btn" onclick="showAmount(10000)" data-amount="10000">
+                            <div class="amount-content">
+                                <i class="fas fa-tenge-sign"></i>
+                                <span class="amount-value">10000</span>
+                                <span class="amount-currency">₸</span>
+                            </div>
+                            <div class="amount-glow"></div>
+                        </button>
+                        <button class="amount-btn" onclick="showAmount(20000)" data-amount="20000">
+                            <div class="amount-content">
+                                <i class="fas fa-tenge-sign"></i>
+                                <span class="amount-value">20000</span>
+                                <span class="amount-currency">₸</span>
+                            </div>
+                            <div class="amount-glow"></div>
+                        </button>
+                    </div>
+                    <p class="amounts-note">
+                        <i class="fas fa-heart"></i>
+                        Кез келген сома қабылданады
+                    </p>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="stats-section">
+                    <h3 class="stats-title">
+                        <i class="fas fa-chart-line"></i>
+                        Статистика
+                    </h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" id="totalDonations">0</div>
+                                <div class="stat-label">Жалпы көрімдік</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-tenge-sign"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" id="totalAmount">0₸</div>
+                                <div class="stat-label">Жалпы сома</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" id="supporters">0</div>
+                                <div class="stat-label">Қолдаушылар</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <i class="fas fa-sparkles"></i>
+                    Сіздің қолдауыңыз үшін шын жүректен рақмет!
+                    <i class="fas fa-sparkles"></i>
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span>Нөмір көшірілді!</span>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="amountModal" class="modal">
+        <div class="modal-backdrop" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <h3 class="modal-title">Ұсынылған сома</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-amount" id="modalAmount">1000 ₸</div>
+                <p class="modal-text">Kaspi арқылы аударыңыз:</p>
+                <div class="modal-phone">+7 777 464 05 65</div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn secondary" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                    Жабу
+                </button>
+                <button class="modal-btn primary" onclick="copyNumber(); closeModal();">
+                    <i class="fas fa-copy"></i>
+                    Көшіру
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confettiContainer" class="confetti-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
